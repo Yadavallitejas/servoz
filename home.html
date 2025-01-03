@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servoz - Expert Services at Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home_styles.css">
+</head>
+<body>
+    <header>
+        <h1>SERVOZ</h1>
+        <p>Expert Professional Services at Your Doorstep</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h2>Transform Your Home Services Experience</h2>
+        <p>Book trusted professionals for all your home needs.</p>
+        <button id="cta-button">Get Started</button>
+        <button id="loging-btn">LOGIN</button>
+        <button id="sign-btn">SIGNUP</button>
+    </section>
+    <section class="services">
+        <h2>Our Popular Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="images/clean-categary.jpeg" alt="Home Cleaning"> 
+                <h3>Home Cleaning</h3>
+                <p>Deep cleaning for a spotless home.</p>
+                <p class="price">Starts at ₹499</p>
+            </div>
+            <div class="service-card">
+                <img src="images/salon.jpeg" alt="Salon at Home"> 
+                <h3>Salon at Home</h3>
+                <p>Professional salon services at your doorstep.</p>
+                <p class="price">Starts at ₹299</p>
+            </div>
+            <div class="service-card">
+                <img src="images/Plumbing-Categary.jpg" alt="Plumbing Services"> 
+                <h3>Plumbing Services</h3>
+                <p>Quick and reliable plumbing solutions.</p>
+                <p class="price">Starts at ₹199</p>
+            </div>
+            <div class="service-card">
+                <img src="images/Electricity-categary.jpg" alt="Appliance Repair"> 
+                <h3>Appliance Repair</h3>
+                <p>Get your appliances fixed in no time.</p>
+                <p class="price">Starts at ₹399</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 SERVOZ. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.getElementById('cta-button').addEventListener('click', function() {
+            alert('Welcome! Start exploring our services.');
+        });
+
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                alert(`You selected: ${card.querySelector('h3').textContent}`);
+            });
+        });
+    </script>
+</body>
+</html>

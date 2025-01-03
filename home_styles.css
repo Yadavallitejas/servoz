@@ -1,0 +1,183 @@
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #B0E0E6 0%, #4169E1 100%); 
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  color: #333;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  color: #4169E1; 
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://unsplash.com/s/photos/home-services') no-repeat center center/cover; 
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.hero button {
+  background: #4169E1; 
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero button:hover {
+  background: #00008B; 
+}
+
+
+
+/* Services Section */
+.services {
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #E0FFFF 0%, #ADD8E6 100%); 
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 120px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: #4169E1; 
+}
+
+.service-card p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.service-card .price {
+  color: #00008B; 
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #00008B 0%, #4169E1 100%); 
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: white;
+  font-size: 1rem;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
