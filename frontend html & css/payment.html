@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVOZ - Payment</title>
+    <link rel="stylesheet" href="payment styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SERVOZ</div>
+        <nav>
+            <ul>
+                <li>Review</li>
+                <li class="active">Payment</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="payment-container">
+        <h1>Payment</h1>
+
+        
+        <div class="product-details">
+            <h2>Product Details</h2>
+            <div class="product-item">
+                <p><strong>Cleaning Service</strong></p>
+                <p>Quantity: 1</p>
+                <p>Price: ₹293</p>
+            </div>
+        </div>
+
+        <div class="payment-details">
+            <h2>Billing Information</h2>
+            <div class="billing-info">
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="field">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <h2>Select Payment Method</h2>
+            <div class="payment-methods-container">
+                <div class="method">
+                    <input type="radio" id="credit-card" name="payment-method" checked>
+                    <label for="credit-card">Credit/Debit Card</label>
+                </div>
+                <div class="method">
+                    <input type="radio" id="upi" name="payment-method">
+                    <label for="upi">UPI</label>
+                </div>
+                <div class="method">
+                    <input type="radio" id="paypal" name="payment-method">
+                    <label for="paypal">PayPal</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-item">
+                <p>Amount:</p>
+                <p>₹293</p>
+            </div>
+            <div class="summary-item">
+                <p>GST (18%):</p>
+                <p>₹52.74</p>
+            </div>
+            <div class="summary-item">
+                <p>Service Tax (5%):</p>
+                <p>₹14.65</p>
+            </div>
+            <div class="summary-item">
+                <p>Tip Amount:</p>
+                <p>₹30</p>
+            </div>
+            <div class="summary-item">
+                <p>Offer Discount:</p>
+                <p>-₹50</p>
+            </div>
+            <div class="summary-item">
+                <p><strong>Total Amount:</strong></p>
+                <p><strong>₹340.39</strong></p>
+            </div>
+        </div>
+
+
+        <div class="action-buttons">
+            <button class="btn left-btn" onclick="location.href='order summary.html'">Go Back</button>
+            <button class="btn right-btn">Proceed to Payment</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 SERVOZ. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px; 
+}
+
+/* Profile Page Styles */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-header button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.settings-container {
+    margin-bottom: 30px;
+}
+
+.settings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.settings-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer; 
+}
+
+.icon {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.sign-out-btn {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Edit Profile Page Styles */
+#editProfilePage {
+    display: none;
+}
+
+#editProfilePage .profile-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#editProfilePage .profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+#editProfilePage .image-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#editProfilePage .image-actions button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#editProfilePage .form-group {
+    margin-bottom: 20px;
+}
+
+#editProfilePage label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#editProfilePage input[type="text"],
+#editProfilePage select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#editProfilePage button[type="submit"] {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Change Password Page Styles */
+#changePasswordPage {
+    display: none;
+}
+
+#changePasswordPage .form-group {
+    margin-bottom: 20px;
+}
+
+#changePasswordPage label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#changePasswordPage input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#changePasswordPage button[type="submit"] {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add Address Page Styles */
+#addAddressPage {
+    display: none;
+}
+
+#addAddressPage .form-group {
+    margin-bottom: 20px;
+}
+
+#addAddressPage label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#addAddressPage input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#addAddressPage button[type="submit"] {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Language Page Styles */
+#languagePage {
+    display: none;
+}
+
+#languagePage .form-group {
+    margin-bottom: 20px;
+}
+
+#languagePage label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#languagePage select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#languagePage button[type="submit"] {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .container {
+    background-color: #444;
+}

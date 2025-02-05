@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="container" id="profilePage"> 
+        <div class="profile-header">
+            <button class="back-btn">←</button>
+            <div class="profile-info">
+                <img src="images/logo.png" alt="Profile Picture">
+                <div>
+                    <h3>NAGARAJU</h3>
+                    <p>male, Age: 18</p>
+                    <p>RAJAHUNDRY, AP</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-container">
+            <h2>Settings</h2>
+            <ul class="settings-list">
+                <li>
+                    <span class="icon">👤</span>
+                    <span class="text">Manage account</span>
+
+                </li>
+                <li>
+                    <span class="icon">🔑</span>
+                    <span class="text">Change password</span>
+
+                </li>
+                <li>
+                    <span class="icon">📍</span> 
+                    <span class="text">Add Address</span>
+
+                </li>
+                <li>
+                    <span class="icon">🌐</span>
+                    <span class="text">Language</span>
+
+                </li>
+                <li class="toggle-container">
+                    <span class="icon">✉️</span>
+                    <span class="text">Email Subscription</span>
+                    <label class="switch">
+                        <input type="checkbox" id="email-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+                <li class="toggle-container">
+                    <span class="icon">🌙</span>
+                    <span class="text">Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <button class="sign-out-btn">Sign out</button>
+    </div>
+
+    <div class="container" id="editProfilePage" style="display: none;"> 
+        <h2>Edit Profile</h2>
+
+        <div class="profile-image">
+            <img src="images/logo.png" alt="Profile Picture">
+            <div class="image-actions">
+                <button>Update new photo</button>
+                <button>Delete existing photo</button>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username" value="HealthyCat2100">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="female" selected>Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" value="30"> 
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" value="Bayerville">
+            </div>
+
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select id="state" name="state">
+                    <option value="MA" selected>MA</option>
+                    {/* Add more state options */}
+                </select>
+            </div>
+
+            <button type="submit">Save Profile</button>
+        </form>
+
+    </div>
+
+    <div class="container" id="changePasswordPage" style="display: none;">
+        <h2>Change Password</h2>
+        <form>
+            <div class="form-group">
+                <label for="currentPassword">Current Password:</label>
+                <input type="password" id="currentPassword" name="currentPassword">
+            </div>
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <div class="container" id="addAddressPage" style="display: none;">
+        <h2>Add Address</h2>
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+            </div>
+            <div class="form-group">
+                <label for="zipCode">Zip Code:</label>
+                <input type="text" id="zipCode" name="zipCode">
+            </div>
+            <button type="submit">Add Address</button>
+        </form>
+    </div>
+
+    <div class="container" id="languagePage" style="display: none;">
+        <h2>Select Language</h2>
+        <form>
+            <div class="form-group">
+                <label for="language">Language:</label>
+                <select id="language" name="language">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    {/* Add more language options */}
+                </select>
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        const manageAccountLink = document.querySelector('.settings-list li:first-child'); 
+const changePasswordLink = document.querySelector('.settings-list li:nth-child(2)');
+const addAddressLink = document.querySelector('.settings-list li:nth-child(3)');
+const languageLink = document.querySelector('.settings-list li:nth-child(4)'); 
+
+const profilePage = document.getElementById('profilePage');
+const editProfilePage = document.getElementById('editProfilePage');
+const changePasswordPage = document.getElementById('changePasswordPage');
+const addAddressPage = document.getElementById('addAddressPage');
+const languagePage = document.getElementById('languagePage');
+
+manageAccountLink.addEventListener('click', () => {
+    profilePage.style.display = 'none';
+    editProfilePage.style.display = 'block';
+});
+
+changePasswordLink.addEventListener('click', () => {
+    profilePage.style.display = 'none';
+    changePasswordPage.style.display = 'block';
+});
+
+addAddressLink.addEventListener('click', () => {
+    profilePage.style.display = 'none';
+    addAddressPage.style.display = 'block';
+});
+
+languageLink.addEventListener('click', () => {
+    profilePage.style.display = 'none';
+    languagePage.style.display = 'block';
+});
+
+const backButtons = document.querySelectorAll('.back-btn');
+
+backButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        editProfilePage.style.display = 'none';
+        changePasswordPage.style.display = 'none';
+        addAddressPage.style.display = 'none';
+        languagePage.style.display = 'none';
+        profilePage.style.display = 'block'; 
+    });
+});
+
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+});
+    </script>
+</body>
+</html>

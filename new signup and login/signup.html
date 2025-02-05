@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up - SERVOZ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login_styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>SERVOZ</h1>
+        <p>      Your Gateway to Professional Services</p>
+    </header>
+    <a href="home.html" class="back-btn-top">← Back to Home</a>
+    <div class="auth-container">
+        <div class="auth-form sign-up-form hidden">
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                {% load static %}
+
+                <div class="form-group">
+                    <label for='first_name'><b>First Name : </b></label>
+		             <input type='text' placeholder="Enter your first name" name='first_name' required><br>
+    		        <label for='last_name'><b>Last Name :</b></label>
+	    	        <input type='text' placeholder='Enter your last name' name='last_name' required><br>
+		            <label for='age'><b>age</b></label>
+		            <input type='number' placeholder='Enter your age' name='age' required><br>
+                   	<label for ='email'><b>Email Id :  </b></label>
+                	<input type="email" placeholder="Enter email" name="email" float="right"  required><br>  
+                	<label for='password'><b>Password : </b></label>
+            	    <input type="text" placeholder="Enter Password" name="password" required><br>  
+            	    <button type="submit"><b>Signup</b></button><br>     
+            	    Already an accounct <a href="http://localhost:8000/login/"> Login </a>
+                </div>
+                
+        
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 SERVOZ. All rights reserved.</p>
+    </footer>
+</body>
+</html>
